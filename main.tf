@@ -14,7 +14,9 @@ provider "aws" {
 // Include modules for specific configurations
 
 module "eks_cluster" {
-  source = "github.com/lily4499/terraform-aws-eks-dvpc.git/my_eks"
+  // source = "github.com/lily4499/terraform-aws-eks-dvpc.git/my_eks"
+  source = "lily4499/eks-dvpc/aws//my_eks"
+  version = ">= 1.0.0, < 2.0.0"
 
   cluster_name                = "liliekscluster"  //provide your Cluster Name here
   eks_version                 = "1.26"
